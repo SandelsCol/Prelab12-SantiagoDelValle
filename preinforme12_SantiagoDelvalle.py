@@ -5,7 +5,8 @@
 #Promedio con respecto a temperaturas
 #la desviación estándar en las mediciones de temperatura promedio semanal 
 #Clasificación de temperaturas según el promedio
-#Desviación promedio entre el rango rentable y el no rentable  
+#Desviación promedio entre el rango rentable y el no rentable
+# Desviación entre utilidad(Rango rentable y el no rentable) y el general  
 
 import statistics
 
@@ -38,3 +39,11 @@ print("El promedio de la Desviación por debajo del promedio fue de",Desviación
 PromedioDesviación= (DesviaciónBuena+DesviaciónMala)/2
 
 print("El promedio de las dos desviaciones es de",PromedioDesviación,"F°")
+
+Desviación_General=statistics.stdev(Promedio_Grados)
+
+print("La desviación total fue de",Desviación_General,"F°")
+
+Diferencia=  Desviación_General - PromedioDesviación
+
+print("La diferencia entre las desviaciones fue de",Diferencia,"F°")
