@@ -5,6 +5,7 @@
 #Promedio con respecto a temperaturas
 #la desviación estándar en las mediciones de temperatura promedio semanal 
 #Clasificación de temperaturas según el promedio
+#Desviación promedio entre el rango rentable y el no rentable  
 
 import statistics
 
@@ -28,3 +29,12 @@ Longitud_Bp=len(Malpromedio)
 print("Las temperaturas que estuvieron por encima del promedio fueron",Buenpromedio,"Creando un total de",Longitud_Gp)
 print("Las temperaturas que estuvieron por debajo del promedio fueron",Malpromedio,"Creando un total de",Longitud_Bp)
 
+DesviaciónBuena= statistics.stdev(Buenpromedio)
+DesviaciónMala= statistics.stdev(Malpromedio)
+
+print("El promedio de la Desviación por encima del promedio fue de",DesviaciónBuena,"F°")
+print("El promedio de la Desviación por debajo del promedio fue de",DesviaciónMala,"F°")
+
+PromedioDesviación= (DesviaciónBuena+DesviaciónMala)/2
+
+print("El promedio de las dos desviaciones es de",PromedioDesviación,"F°")
